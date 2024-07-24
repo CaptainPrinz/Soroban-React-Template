@@ -27,11 +27,10 @@ run(`stellar network add ${process.env.NETWORK} --rpc-url ${process.env.RPC_URL}
 run(`stellar keys generate ${process.env.ACCOUNT} --network ${process.env.NETWORK}`)
 
 //Delete Remove all pre-existing Wasm Files
-<<<<<<< HEAD
-const existingFiles = globSync("./target/**.wasm");
-=======
+
+
 const existingFiles = globSync("target/**.wasm");
->>>>>>> 27d0ec9458c66f99b54fc935c95cdc669e89f13e
+
 console.log(`Existing Files ${existingFiles}`);
 
 existingFiles.forEach((filePath, index) => {
