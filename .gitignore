@@ -122,6 +122,9 @@ dist
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 
+#soroban contract files and profiles
+.soroban
+
 # yarn v2
 .yarn/cache
 .yarn/unplugged
