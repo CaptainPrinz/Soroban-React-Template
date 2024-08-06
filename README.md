@@ -44,6 +44,7 @@ To run the Soroban React template project, follow these steps:
    - Open your terminal.
    - Run the following command to initialize the project:
      ```bash
+     npm install
      npm run setup
      ```
    - This command executes the `initialize.js` file, which performs the following tasks:
