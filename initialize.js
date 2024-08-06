@@ -21,7 +21,7 @@ const run = (command) => {
 
 //Configure the network for the project
 console.log("Configuring Network")
-run(`stellar network add ${process.env.NETWORK} --rpc-url ${process.env.RPC_URL} --network-passphrase ${process.env.NETWORK_PASSPHRASE}`)
+run(`stellar network add ${process.env.NETWORK} --rpc-url ${process.env.RPC_URL} --network-passphrase "${process.env.NETWORK_PASSPHRASE}"`)
 
 //Generate and fund the Wallet Profile for the project
 run(`stellar keys generate ${process.env.ACCOUNT} --network ${process.env.NETWORK}`)
