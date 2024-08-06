@@ -76,5 +76,5 @@ let filename, output_dir;
 files.forEach((file) => {
     filename = path.basename(file).split(".")[0];
     output_dir = `./packages/${filename}`;
-    run(`stellar contract bindings typescript --output-dir ${output_dir} --network ${process.env.NETWORK} --contract-id ${contractsObject[alias]["id"]} --overwrite --wasm ${file}`)
+    run(`stellar contract bindings typescript --output-dir ${output_dir} --network ${process.env.NETWORK} --contract-id ${contractsObject[alias]["id"]} --overwrite`)
 });
