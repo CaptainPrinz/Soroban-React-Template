@@ -4,7 +4,7 @@ import { globSync } from "glob"
 import path from "path"
 import { writeFileSync, rmSync } from "fs"
 
-//Create An object to hold the Contract IDs and Alias 
+//Create An object to hold the Contract IDs and Alias
 const contractsObject = {};
 
 //Create a wrapper around execSync function to handle errors and makes its return easily available withing the script
@@ -60,7 +60,7 @@ files.forEach((file) => {
     }
 });
 
-//Create a json File to store the contract name as key and contract id and contract alias contained in an object as value 
+//Create a json File to store the contract name as key and contract id and contract alias contained in an object as value
 const contractsJSONPath = "./contracts.json";
 const contractsJSONData = JSON.stringify(contractsObject);
 
@@ -76,5 +76,5 @@ let filename, output_dir;
 files.forEach((file) => {
     filename = path.basename(file).split(".")[0];
     output_dir = `./packages/${filename}`;
-    run(`stellar contract bindings typescript --output-dir ${output_dir} --network ${process.env.NETWORK} --contract-id ${contractsObject[alias]["id"]} --overwrite`)
+    run(`stellar contract bindings typescript --output-dir ${output_dir} --overwrite --network ${process.env.NETWORK} --contract-id ${contractsObject[alias]["id"]}`)
 });
